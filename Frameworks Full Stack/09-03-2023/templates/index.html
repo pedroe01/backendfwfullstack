@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/index.js"></script>
+    <title>Formulário de Contato</title>
+</head>
+<body>
+    <form name="mainform">
+        <h1>Entre em contato</h1>
+        <label for="nome">Nome:</label>
+        <input type="text" id="id-nome" required="required" name="nome"> <br>
+        <label for="tel">Telefone:</label>
+        <input type="tel" id="id-tel" required="required" name="tel" placeholder="(xx) xxxxx-xxxx"> <br>
+        <label for="email">Email</label>
+        <input type="email" id="id-email" required="required" name="email"> <br>
+        <textarea placeholder="Deixe sua opinião"></textarea> <br>
+        <input type="submit" class="enviar" onclick="Enviar();" value="Enviar"> <br>
+    </form>
+</body>
+</html>
