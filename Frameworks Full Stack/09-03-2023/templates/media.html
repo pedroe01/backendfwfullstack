@@ -5,31 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de Média</title>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');</style>
-    <style>
-        body { 
-            font-family: 'Varela Round', sans-serif;    font-size: 15px; 
-            background-color: rgb(66, 66, 66);
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/media.css">
 </head>
 <body>
     <h1>Aprovado ou Reprovado?</h1>
     <div>
         <form method="get">
             <label for="n1">Primeira nota:</label> <br>
-            <input type="text" name="n1"> <br>
+            <input type="text" name="n1" required="required"> <br>
             <label for="n2">Segunda nota:</label> <br>
-            <input type="text" name="n2"> <br> <br>
-            <input type="submit" value="Enviar">
+            <input type="text" name="n2" required="required"> <br> <br>
+            <input type="submit" value="Calcular">
         </form>
     </div>
 
     {% if resultado %}
+        {% if media %}
+            {% if media >= 7 %}
+            <style> h2 {color: greenyellow;} </style>
+            {% elif media > 4 and media < 7 %}
+            <style> h2 {color: yellow;} </style>
+            {% else %}
+            <style> h2 {color: rgb(255, 63, 63);} </style>
+            {% endif %}
+        {% endif %}
     <br>
     <div>
-        {{resultado}}
+        <h2>{{resultado}}</h2>
     </div>
     {% endif %}
 </body>
